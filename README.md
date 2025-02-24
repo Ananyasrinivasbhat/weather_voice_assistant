@@ -121,5 +121,7 @@ docker-compose up --build
 
 🚀 **Try it out and let your voice control the weather updates!** 🎙️🌦️
 
-## ** video demo**
+## video demo
+Video is uploaded in repository as demo.mp4
+
 <video src="demo.mp4" controls width="600"></video>
