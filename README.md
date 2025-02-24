@@ -122,4 +122,4 @@ docker-compose up --build
 🚀 **Try it out and let your voice control the weather updates!** 🎙️🌦️
 
 ## ** video demo**
-<video src="video.mp4" controls width="600"></video>
+<video src="demo.mp4" controls width="600"></video>
