@@ -1,0 +1,263 @@
+/* Global Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to right, #052e51, #0fb8c1);
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Heading */
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Main Content */
+.main-content {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+/* Current Location Weather */
+.current-location-weather {
+  width: 300px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Search and Microphone Box */
+.search-mic-box {
+  flex: 1;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.search-bar {
+  width: 100%;
+  padding: 15px;
+  font-size: 18px;
+  border-radius: 30px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  outline: none;
+  transition: all 0.3s;
+}
+
+.search-bar::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.search-bar:hover, .search-bar:focus {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.4);
+  border-color: rgba(255, 255, 255, 0.8);
+}
+
+.mic-button {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #ff4081;
+  color: white;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s;
+}
+
+.mic-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.4);
+  background: #ff1a5e;
+}
+
+/* Recent Searches */
+
+
+/* Loading Spinner and Error Modal */
+.loading-spinner, .error-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/* Search and Microphone Container */
+.search-mic-container {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between search bar and microphone button */
+  width: 100%;
+  max-width: 500px; /* Adjust based on your design */
+}
+
+/* Search Bar */
+.search-bar {
+  flex: 1; /* Take up remaining space */
+  padding: 15px;
+  font-size: 18px;
+  border-radius: 30px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  outline: none;
+  transition: all 0.3s;
+}
+
+.search-bar::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.search-bar:hover, .search-bar:focus {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.4);
+  border-color: rgba(255, 255, 255, 0.8);
+}
+
+/* Microphone Button */
+.mic-button {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #ff4081;
+  color: white;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s;
+}
+
+.mic-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.4);
+  background: #ff1a5e;
+}
+
+@keyframes wave {
+  0% {
+    transform: translateX(-100%) translateY(-50%);
+  }
+  100% {
+    transform: translateX(100%) translateY(-50%);
+  }
+}
+
+/* Pop Animation for Result Display */
+@keyframes pop {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.weather-card {
+  animation: pop 0.5s ease-out ;
+}
+
+/* Recent Searches Container */
+.recent-searches {
+  position: fixed;
+  top :500px;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  display: flex;
+  flex-direction: row; /* Ensure cards are laid out horizontally */
+  gap: 10px; /* Space between cards */
+   
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.flip-card-container {
+  flex: 0 0 auto; /* Ensure each container doesn't grow or shrink */
+  width: 250px; /* Fixed width for each card container */
+  height: 110px; /* Fixed height for each card container */
+}
+
+/* Flip Card Styling */
+.flip-card {
+  
+  background: transparent;
+  width: 250px; /* Adjust width as needed */
+  height: 100px;
+  perspective: 1000px;
+  
+  flex-shrink: 0; /* Prevent cards from shrinking */
+}
+
+.flip-card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+}
+
