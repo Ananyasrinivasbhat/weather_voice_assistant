@@ -59,8 +59,8 @@ Welcome to the **Voice Weather Assistant**! This smart application provides real
 
 1️⃣ Clone the repository:  
 ```sh
-git clone https://github.com/your-username/voice-weather-assistant.git
-cd voice-weather-assistant
+git clone https://github.com/ananyasrinivasbhat/weather_voice_assistant.git
+cd voice_weather_assistant
 ```
 
 2️⃣ Add your OpenWeather API key:  
